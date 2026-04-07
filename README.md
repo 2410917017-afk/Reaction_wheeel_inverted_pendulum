@@ -316,13 +316,13 @@ R = 300;                % penalización del esfuerzo de control
 ### Respuesta del controlador LQR
 
 <p align="center">
-  <img src="matlab/resultados/simulacion_no_lineal.png" width="700"/>
+  <img src="System_dynamics_test/resultados/simulacion_no_lineal.png" width="700"/>
 </p>
 
 ### Comparación modelo lineal vs no lineal
 
 <p align="center">
-  <img src="matlab/resultados/lineal_vs_nolineal.png" width="500"/>
+  <img src="System_dynamics_test/resultados/lineal_vs_nolineal.png" width="500"/>
 </p>
 
 La diferencia entre ambos modelos corresponde al error de linealización (`sinθ ≈ θ`), que produce un undershoot de ~0.8° en el modelo no lineal. Este comportamiento es esperado y se documenta como parte del análisis de validez del modelo linealizado.
