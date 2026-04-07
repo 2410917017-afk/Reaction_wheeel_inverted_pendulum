@@ -126,19 +126,19 @@ reaction-wheel-pendulum/
 │       ├── identify_deadzone.ino    # Identificación zona muerta motor
 │       └── identify_motor.ino       # Curva PWM-velocidad (Kt, Ra)
 │
-├── system_dinamics_test/                          # Simulación y diseño de control
-│   ├── params.m                 # Parámetros físicos del sistema
-│   ├── model.m                     # Matrices A,B, controlabilidad, LQR
+├── System_dinamics_test/            # Simulación y diseño de control
+│   ├── params.m                     # Parámetros físicos del sistema
+│   ├── model.m                      # Matrices A,B, controlabilidad, LQR
 │   ├── simulation.m                 # Simulación no lineal ODE45
-│   ├── system.m                # Función dinámica no lineal (ODE)
+│   ├── system.m                     # Función dinámica no lineal (ODE)
 │   └── resultados/                  # Gráficas exportadas
 │       ├── respuesta_lineal.png
 │       ├── simulacion_no_lineal.png
 │       ├── lineal_vs_nolineal.png
 │       └── lugar_de_raices.png
 │
-├── cad/                             # Diseño mecánico
-│   ├── stl/                         # Archivos listos para imprimir
+├── CAD/                             # Diseño mecánico
+│   ├── STL/                         # Archivos listos para imprimir
 │   │   ├── brazo_pendulo.stl
 │   │   ├── rueda_inercia.stl
 │   │   ├── soporte_base.stl
