@@ -117,21 +117,20 @@ reaction-wheel-pendulum/
 ├── README.md
 ├── LICENSE
 │
-├── firmware/                        # Código ESP32
+├── src/                        # Código ESP32
 │   ├── main/
 │   │   ├── rwp_main.ino             # Controlador LQR completo
-│   │   ├── sensors.h                # Lectura AS5600 + Encoder
-│   │   ├── motor.h                  # Control PWM del motor
-│   │   └── config.h                 # Ganancias y parámetros
+│   │   └── real_time_monitor.py     # Monitor en tiempo real
 │   └── tools/
+│       ├── sensors.h                # Lectura AS5600 + Encoder
 │       ├── identify_deadzone.ino    # Identificación zona muerta motor
 │       └── identify_motor.ino       # Curva PWM-velocidad (Kt, Ra)
 │
-├── matlab/                          # Simulación y diseño de control
-│   ├── Parametros.m                 # Parámetros físicos del sistema
-│   ├── Modelo.m                     # Matrices A,B, controlabilidad, LQR
-│   ├── Simulacion.m                 # Simulación no lineal ODE45
-│   ├── Dinamica_nl.m                # Función dinámica no lineal (ODE)
+├── system_dinamics_test/                          # Simulación y diseño de control
+│   ├── params.m                 # Parámetros físicos del sistema
+│   ├── model.m                     # Matrices A,B, controlabilidad, LQR
+│   ├── simulation.m                 # Simulación no lineal ODE45
+│   ├── system.m                # Función dinámica no lineal (ODE)
 │   └── resultados/                  # Gráficas exportadas
 │       ├── respuesta_lineal.png
 │       ├── simulacion_no_lineal.png
@@ -213,7 +212,6 @@ Notas:
   • AS5600: imán diametral centrado a 0.5–3mm del sensor
   • Capacitor 100µF entre VCC y GND del driver (desacoplo)
   • Masa común entre ESP32, driver y fuente
-```
 
 El esquemático completo en KiCad se encuentra en [`electronics/schematic.pdf`](electronics/schematic.pdf).
 
@@ -233,7 +231,7 @@ El esquemático completo en KiCad se encuentra en [`electronics/schematic.pdf`](
 ```bash
 git clone https://github.com/tu-usuario/reaction-wheel-pendulum.git
 cd reaction-wheel-pendulum
-```
+``` 
 
 ### 2. Configurar parámetros
 
