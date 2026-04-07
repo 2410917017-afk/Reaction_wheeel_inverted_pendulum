@@ -316,7 +316,7 @@ R = 300;                % penalización del esfuerzo de control
 ### Respuesta del controlador LQR
 
 <p align="center">
-  <img src="System_dynamics_test/resultados/simulacion_no_lineal.png" width="700"/>
+  <img src="System_dynamics_test/resultados/simulación_no_lineal.png" width="700"/>
 </p>
 
 ### Comparación modelo lineal vs no lineal
