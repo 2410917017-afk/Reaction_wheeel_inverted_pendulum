@@ -44,7 +44,6 @@ Este proyecto implementa:
 - **Representación en espacio de estados** con verificación de controlabilidad
 - **Diseño del controlador LQR** mediante la ecuación algebraica de Riccati
 - **Simulación no lineal** en MATLAB/Simulink con comparación lineal vs no lineal
-- **Implementación en tiempo real** en ESP32 a 500 Hz
 - **Sensado** con encoder incremental óptico (ángulo péndulo) y encoder magnético AS5600 (velocidad rueda)
 - **Estructura mecánica** completamente imprimible en 3D
 
@@ -112,10 +111,39 @@ Para la derivación completa con todos los pasos intermedios, ver [`docs/teoria_
 ##  Estructura del repositorio
 
 ```
-reaction-wheel-pendulum/
+Reaction_wheel_pendulum/
 │
-├── README.md
-├── LICENSE
+│
+├── CAD/                             # Diseño mecánico
+│   ├── STL/                         # Archivos listos para imprimir
+│   │   ├── Arm_V10_STL.stl
+│   │   ├── Support_V5.stl
+│   │   ├── Tower_V7_STL.stl
+│   │   └── Wheel_V5_STL.stl
+│   ├──planos/                      # Planos dimensionales PDF
+│   │   ├── Arm.pdf
+│   │   ├── ExplodedView.pdf
+│   │   ├── Support_V5.pdf
+│   │   ├── Tower_V7.pdf
+│   │   └── Wheel_V5_Sheet.pdf
+│   └──step/                        # Archivos STEP 
+│       └── ensamble_completo.step
+│
+├── System_dinamics_test/            # Simulación y diseño de control
+│   ├── params.m                     # Parámetros físicos del sistema
+│   ├── model.m                      # Matrices A,B, controlabilidad, LQR
+│   ├── simulation.m                 # Simulación no lineal ODE45
+│   ├── system.m                     # Función dinámica no lineal 
+│   └── resultados/                  # Gráficas exportadas
+│       ├── respuesta_lineal.png
+│       ├── simulacion_no_lineal.png
+│       ├── lineal_vs_nolineal.png
+│       └── lugar_de_raices.png
+│
+├── docs/                            # Documentación adicional
+│   ├── teoria_completa.pdf          # Derivación matemática completa
+│   └── img/
+│       └── Assembly 1.png
 │
 ├── src/                        # Código ESP32
 │   ├── main/
@@ -123,44 +151,15 @@ reaction-wheel-pendulum/
 │   │   └── real_time_monitor.py     # Monitor en tiempo real
 │   └── tools/
 │       ├── sensors.h                # Lectura AS5600 + Encoder
-│       ├── identify_deadzone.ino    # Identificación zona muerta motor
-│       └── identify_motor.ino       # Curva PWM-velocidad (Kt, Ra)
-│
-├── System_dinamics_test/            # Simulación y diseño de control
-│   ├── params.m                     # Parámetros físicos del sistema
-│   ├── model.m                      # Matrices A,B, controlabilidad, LQR
-│   ├── simulation.m                 # Simulación no lineal ODE45
-│   ├── system.m                     # Función dinámica no lineal (ODE)
-│   └── resultados/                  # Gráficas exportadas
-│       ├── respuesta_lineal.png
-│       ├── simulacion_no_lineal.png
-│       ├── lineal_vs_nolineal.png
-│       └── lugar_de_raices.png
-│
-├── CAD/                             # Diseño mecánico
-│   ├── STL/                         # Archivos listos para imprimir
-│   │   ├── brazo_pendulo.stl
-│   │   ├── rueda_inercia.stl
-│   │   ├── soporte_base.stl
-│   │   ├── soporte_motor.stl
-│   │   └── acoplador_encoder.stl
-│   ├── step/                        # Archivos STEP (editables)
-│   │   └── ensamble_completo.step
-│   └── planos/                      # Planos dimensionales PDF
-│       ├── plano_brazo.pdf
-│       ├── plano_rueda.pdf
-│       └── plano_base.pdf
+│       └── identify_deadzone.ino    # Identificación zona muerta motor
 │
 ├── electronics/                     # Diseño electrónico
 │   ├── schematic.pdf                # Esquemático completo
-│   ├── schematic.kicad_sch          # Fuente KiCad
 │   └── bom.csv                      # Lista de materiales
 │
-└── docs/                            # Documentación adicional
-    ├── teoria_completa.pdf          # Derivación matemática completa
-    └── img/
-        ├── assembly_render.png
-        └── hardware_photo.jpg
+├── README.md
+└── LICENSE
+
 ```
 
 ---
@@ -213,7 +212,7 @@ Notas:
   • Capacitor 100µF entre VCC y GND del driver (desacoplo)
   • Masa común entre ESP32, driver y fuente
 
-El esquemático completo en KiCad se encuentra en [`electronics/schematic.pdf`](electronics/schematic.pdf).
+El esquemático completo en EasyEDA se encuentra en [`electronics/schematic.pdf`](electronics/schematic.pdf).
 
 ---
 
