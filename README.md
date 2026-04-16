@@ -3,7 +3,7 @@
 > Plataforma educativa open-source de control moderno basada en un péndulo invertido con rueda de inercia. Implementa control LQR (Regulador Cuadrático Lineal) con modelado por mecánica Lagrangiana, simulación en MATLAB y hardware basado en ESP32.
 
 <p align="center">
-  <img src="docs/img/assembly_render.png" alt="Ensamble CAD" width="400"/>
+  <img src="docs/img/Assembly%201.png" alt="Ensamble CAD" width="400"/>
 </p>
 
 <p align="center">
