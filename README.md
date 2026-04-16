@@ -1,4 +1,4 @@
-# Reaction Wheel Inverted Pendulum 🎡
+# Reaction Wheel Inverted Pendulum 
 
 > Plataforma educativa open-source de control moderno basada en un péndulo invertido con rueda de inercia. Implementa control LQR (Regulador Cuadrático Lineal) con modelado por mecánica Lagrangiana, simulación en MATLAB y hardware basado en ESP32.
 
@@ -16,7 +16,7 @@
 
 ---
 
-## 📋 Contenido
+##  Contenido
 
 - [Descripción del proyecto](#-descripción-del-proyecto)
 - [Motivación y problemática](#-motivación-y-problemática)
@@ -33,7 +33,7 @@
 
 ---
 
-## 🔬 Descripción del proyecto
+##  Descripción del proyecto
 
 El **Reaction Wheel Inverted Pendulum (RWIP)** es un sistema mecatrónico que mantiene un péndulo en posición vertical utilizando el momento angular generado por una rueda giratoria montada en su extremo superior. A diferencia del péndulo de carro clásico, no requiere traslación lineal — el único actuador es el motor que acelera y desacelera la rueda de inercia.
 
@@ -50,7 +50,7 @@ Este proyecto implementa:
 
 ---
 
-## 💡 Motivación y problemática
+##  Motivación y problemática
 
 Los estudiantes de ingeniería en control moderno aprenden conceptos como espacio de estados y LQR sin acceso a plantas físicas para experimentar. Las plataformas comerciales equivalentes como el **Quanser QUBE-Servo 2** tienen un costo de entre **\$3,000 y \$8,000 USD**, lo que las hace inaccesibles para la mayoría de instituciones educativas en México y Latinoamérica.
 
@@ -65,7 +65,7 @@ El principio físico de las reaction wheels es el mismo utilizado en **satélite
 
 ---
 
-## 📐 Teoría y fundamentos
+##  Teoría y fundamentos
 
 ### Sistema físico
 
@@ -109,7 +109,7 @@ Para la derivación completa con todos los pasos intermedios, ver [`docs/teoria_
 
 ---
 
-## 📁 Estructura del repositorio
+##  Estructura del repositorio
 
 ```
 reaction-wheel-pendulum/
@@ -165,7 +165,7 @@ reaction-wheel-pendulum/
 
 ---
 
-## 🔧 Hardware requerido
+##  Hardware requerido
 
 ### Lista de componentes
 
@@ -217,7 +217,7 @@ El esquemático completo en KiCad se encuentra en [`electronics/schematic.pdf`](
 
 ---
 
-## 🚀 Instalación y uso
+##  Instalación y uso
 
 ### Requisitos
 
@@ -279,7 +279,7 @@ python docs/graficar_serial.py
 
 ---
 
-## 📊 Simulación en MATLAB
+##  Simulación en MATLAB
 
 ### Correr la simulación completa
 
@@ -311,7 +311,7 @@ R = 300;                % penalización del esfuerzo de control
 
 ---
 
-## 📈 Resultados
+##  Resultados
 
 ### Respuesta del controlador LQR
 
@@ -329,7 +329,7 @@ La diferencia entre ambos modelos corresponde al error de linealización (`sinθ
 
 ---
 
-## 🔮 Trabajo futuro
+##  Trabajo futuro
 
 - [ ] **Identificación experimental** de parámetros del motor (Kt, Ra, Ke)
 - [ ] **Comparación PID vs LQR** con métricas cuantitativas (ISE, IAE, ITAE)
@@ -341,7 +341,7 @@ La diferencia entre ambos modelos corresponde al error de linealización (`sinθ
 
 ---
 
-## 📚 Referencias
+##  Referencias
 
 1. Krafes, S. et al. *"Design, Implementation, and Control of a Wheel-Based Inverted Pendulum"*, MDPI Electronics, 2024. [DOI: 10.3390/electronics13030514](https://doi.org/10.3390/electronics13030514)
 
@@ -357,7 +357,7 @@ La diferencia entre ambos modelos corresponde al error de linealización (`sinθ
 
 ---
 
-## 👤 Autor
+##  Autor
 
 Desarrollado como **proyecto integrador de 5° cuatrimestre** de la carrera de Ingeniería Mecatrónica **Institución:** Universidad Tecnológica de Corregidora
 **Materia:** Sistemas de Control / Proyecto Integrador  
@@ -365,7 +365,7 @@ Desarrollado como **proyecto integrador de 5° cuatrimestre** de la carrera de I
 
 ---
 
-## 📄 Licencia
+##  Licencia
 
 Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
@@ -374,5 +374,5 @@ Puedes usar, modificar y distribuir este proyecto libremente, incluyendo para fi
 ---
 
 <p align="center">
-  Hecho con ☕ y demasiadas horas en MATLAB
+  Hecho con café y demasiadas horas en MATLAB
 </p>
