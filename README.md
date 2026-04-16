@@ -154,8 +154,7 @@ Reaction_wheel_pendulum/
 │       └── identify_deadzone.ino    # Identificación zona muerta motor
 │
 ├── electronics/                     # Diseño electrónico
-│   ├── schematic.pdf                # Esquemático completo
-│   └── bom.csv                      # Lista de materiales
+│   └── schematic.pdf                # Esquemático completo
 │
 ├── README.md
 └── LICENSE
