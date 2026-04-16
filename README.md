@@ -16,23 +16,6 @@
 
 ---
 
-##  Contenido
-
-- [Descripción del proyecto](#-descripción-del-proyecto)
-- [Motivación y problemática](#-motivación-y-problemática)
-- [Teoría y fundamentos](#-teoría-y-fundamentos)
-- [Estructura del repositorio](#-estructura-del-repositorio)
-- [Hardware requerido](#-hardware-requerido)
-- [Diagrama electrónico](#-diagrama-electrónico)
-- [Instalación y uso](#-instalación-y-uso)
-- [Simulación en MATLAB](#-simulación-en-matlab)
-- [Resultados](#-resultados)
-- [Trabajo futuro](#-trabajo-futuro)
-- [Referencias](#-referencias)
-- [Licencia](#-licencia)
-
----
-
 ##  Descripción del proyecto
 
 El **Reaction Wheel Inverted Pendulum (RWIP)** es un sistema mecatrónico que mantiene un péndulo en posición vertical utilizando el momento angular generado por una rueda giratoria montada en su extremo superior. A diferencia del péndulo de carro clásico, no requiere traslación lineal — el único actuador es el motor que acelera y desacelera la rueda de inercia.
